@@ -1,20 +1,18 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Cloud_Net_Sdk_Hmac_Lib.Validation;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace CoreEngine.BuildingBlocks.Hmac
 {
     public static class RegisterHmac
     {
         /// <summary>
-        /// Register Hmac authen
+        /// Register Hmac authentication
         /// </summary>
         /// <param name="services"></param>
         /// <returns></returns>
-        public static IServiceCollection AddIdentityServiceHeader(this IServiceCollection services)
+        public static IServiceCollection AddHmacAuthen(this IServiceCollection services)
         {
-            // TODO add hmac lib
+            services.AddAuthentication(HMACAuthOptions.Scheme).AddScheme<HMACAuthOptions, CustomAuthHandler>(HMACAuthOptions.Scheme, null);
 
             return services;
         }

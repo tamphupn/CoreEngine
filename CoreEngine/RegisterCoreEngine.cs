@@ -1,11 +1,11 @@
 ﻿using CoreEngine.BuildingBlocks.CommonPackage;
 using CoreEngine.BuildingBlocks.Config;
 using CoreEngine.BuildingBlocks.HeaderIdentity;
+using CoreEngine.BuildingBlocks.Hmac;
 using CoreEngine.BuildingBlocks.Swagger;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using System;
 
 namespace CoreEngine
 {
@@ -30,6 +30,7 @@ namespace CoreEngine
             if (config.EnableGzip) services.AddGzipCompress();
             if (config.EnableIdentityServiceHeader) services.AddIdentityServiceHeader();
             if (config.EnableSwaggerUI) services.InitSwaggerUI(configuration);
+            if (config.EnableHmacAuthentication) services.AddHmacAuthen();
 
             return services;
         }
