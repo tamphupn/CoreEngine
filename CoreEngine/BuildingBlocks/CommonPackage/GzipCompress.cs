@@ -4,7 +4,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace CoreEngine.BuildingBlocks.CommonPackage
 {
-    public static class GzipComress
+    public static class GzipCompress
     {
         /// <summary>
         /// Register gzip compress
