@@ -12,12 +12,8 @@
     <RepositoryUrl>https://github.com/healer-code/CoreEngine</RepositoryUrl>
     <RepositoryType />
     <PackageTags>dotnet core</PackageTags>
-    <Version>1.0.1</Version>
+    <Version>1.0.2</Version>
   </PropertyGroup>
-
-  <ItemGroup>
-    <Folder Include="BuildingBlocks\Pagination\" />
-  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Cloud.Net.Sdk.Hmac" Version="1.0.6" />
