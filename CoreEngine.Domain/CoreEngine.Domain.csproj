@@ -2,12 +2,26 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <Authors>Tam Phu Pham Nguyen</Authors>
+    <Company>Vitality</Company>
+    <Description>Common package to build data access layer</Description>
+    <PackageProjectUrl>https://github.com/healer-code/CoreEngine/tree/master/CoreEngine.Domain</PackageProjectUrl>
+    <Version>1.0.1</Version>
+    <PackageIcon>profile-picture.png</PackageIcon>
+    <PackageIconUrl />
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="10.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.6" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="3.1.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\vitality_blog_frontend\img\profile-picture.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>
