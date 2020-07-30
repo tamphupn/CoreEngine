@@ -10,9 +10,8 @@ namespace CoreEngine.Domain
         /// Register core engine for domain data accesss
         /// </summary>
         /// <param name="services"></param>
-        /// <param name="configuration"></param>
         /// <returns></returns>
-        public static IServiceCollection AddCoreEngineDomain(IServiceCollection services, IConfiguration configuration)
+        public static IServiceCollection AddCoreEngineDomain(this IServiceCollection services)
         {
             services.AddTransient((typeof(IRepository<>)), (typeof(EfRepository<>)));
 
